@@ -1,13 +1,24 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import React, { Suspense, lazy } from "react";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import "./index.css";
-import App from "./App.tsx";
+import { ThemeProviderWrapper } from "./ThemeProviderWrapper";
+import Loader from "./components/Loader";
+import ErrorBoundary from "./components/ErrorBoundary";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
+const App = lazy(() =>
+  import("./App").then((module) => ({ default: module.App }))
+);
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ThemeProviderWrapper>
+        <ErrorBoundary>
+          <Suspense fallback={<Loader />}>
+            <App />
+          </Suspense>
+        </ErrorBoundary>
+      </ThemeProviderWrapper>
     </BrowserRouter>
-  </StrictMode>
+  </React.StrictMode>
 );
