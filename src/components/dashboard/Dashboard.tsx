@@ -71,19 +71,6 @@ export const Dashboard = ({
           }}
         />
       )}
-      <Typography
-        variant="subtitle1"
-        sx={{
-          mb: 3,
-          textIndent: 40,
-          lineHeight: 1.6,
-          color: theme.palette.text.secondary,
-        }}
-      >
-        Welcome to the Blog Management Dashboard. Here you can view, add, edit,
-        and delete blog posts from all authors. Use the search box to filter by
-        title or author, and quickly manage both draft and published posts.
-      </Typography>
 
       <Paper sx={{ p: 3, mb: 3 }}>
         <Stack direction="row" sx={{ mb: 2, alignItems: "center" }}>
@@ -93,7 +80,7 @@ export const Dashboard = ({
           <TextField
             label="Search by Title or Author"
             size="small"
-            sx={{ ml: "auto", width: 250 }}
+            sx={{ ml: "auto" }}
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
             slotProps={{

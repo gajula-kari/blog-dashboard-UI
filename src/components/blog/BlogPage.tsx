@@ -9,6 +9,7 @@ import {
   CardContent,
   Divider,
   Tooltip,
+  IconButton,
 } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import type { BlogData } from "../../common/type";
@@ -64,24 +65,24 @@ export const BlogPage = ({ blogs, updateBlogs }: BlogPageProps) => {
       <Card elevation={4} sx={{ p: { xs: 2, sm: 2 } }}>
         <CardContent>
           <Box display="flex" justifyContent="space-between">
-            <Typography variant="h6" gutterBottom>
-              {blog.title}
-            </Typography>
+            <Typography variant="h5">{blog.title}</Typography>
 
             {blog.status === "Draft" && (
               <Tooltip title="Publish Blog">
-                <PublishIcon
+                <IconButton
                   sx={{
-                    cursor: "pointer",
-                    color: "primary.main",
+                    backgroundColor: "secondary.light",
+                    color: "white",
                   }}
                   onClick={() => onPublishIconClick()}
-                />
+                >
+                  <PublishIcon />
+                </IconButton>
               </Tooltip>
             )}
           </Box>
 
-          <Typography variant="subtitle1" color="text.secondary" gutterBottom>
+          <Typography variant="subtitle2" color="text.secondary" gutterBottom>
             By {blog.author} | {new Date(blog.date).toLocaleDateString()}
           </Typography>
           <Chip
