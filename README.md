@@ -76,7 +76,10 @@ Custom Light and Dark themes implemented using Material UI's `createTheme`.
 ## 🖼 Screenshots
 
 - Dashboard (Light Mode)
+  <img width="1332" height="874" alt="image" src="https://github.com/user-attachments/assets/ccf84f23-3eb1-4691-a05a-cb93764f511f" />
+
 - Dashboard (Dark Mode)
+  <img width="1329" height="874" alt="image" src="https://github.com/user-attachments/assets/3e47be81-6750-459c-8355-e9657ce8fcf1" />
 
 ## 🙌 Acknowledgements
 
