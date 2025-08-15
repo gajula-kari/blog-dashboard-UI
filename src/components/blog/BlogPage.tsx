@@ -73,6 +73,9 @@ export const BlogPage = ({ blogs, updateBlogs }: BlogPageProps) => {
                   sx={{
                     backgroundColor: "secondary.light",
                     color: "white",
+                    "&:hover": {
+                      backgroundColor: "secondary.dark",
+                    },
                   }}
                   onClick={() => onPublishIconClick()}
                 >
