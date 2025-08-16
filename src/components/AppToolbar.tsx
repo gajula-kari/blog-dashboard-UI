@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, ToggleButton, Box } from "@mui/material";
+import { AppBar, Toolbar, ToggleButton, Box, Typography } from "@mui/material";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { useThemeContext } from "../ThemeProviderWrapper";
@@ -8,15 +8,19 @@ export const AppToolbar = () => {
   return (
     <AppBar position="sticky" sx={{ height: 80, justifyContent: "center" }}>
       <Toolbar>
-        <Box
-          component="img"
-          src="/Blog.png"
-          alt="Blog Dashboard"
+        <Typography
+          variant="h4"
           sx={{
-            height: { xs: 24, sm: 28, md: 33, lg: 37 },
-            width: "auto",
+            fontSize: {
+              xs: 21,
+              sm: 26,
+              md: 29,
+              lg: 33,
+            },
           }}
-        />
+        >
+          Blog Management Dashboard
+        </Typography>
         <Box sx={{ ml: "auto" }}>
           <ToggleButton
             value="theme"
