@@ -1,21 +1,20 @@
-
-# 🧩 Responsive Blog Dashboard UI
+# Responsive Blog Dashboard UI
 
 A responsive Blog Management Dashboard built with React and Material UI v5, supporting basic CRUD operations for blog posts. This project stores all data in-memory using React state, with Local Storage for persistence across page refreshes. It also features React Router for navigating between the dashboard and individual blog pages.
 
-## ✨ Features
+## Features
 
-- 🖥 **Responsive UI:** Fully adaptable layout for desktop and mobile.
-- 📝 **CRUD Operations:** Create, Read, Update, Delete blog posts.
-- 💾 **Local Storage Persistence:** Data remains after page refresh.
-- 📄 **Individual Blog Pages:** View full blog post details using React Router.
-- 🎨 **Material UI Theming:** Custom light and dark themes.
-- 🚀 **Client-Side Only:** No backend or API required.
-- ➡️ **Clickable Rows:** Click on a blog row – except action icons – to view blog details.
-- ✨ **Content Preview:** Hover on blog titles to show truncated content previews.
-- 🧩 **Clear Visual Cues:** Clickable caret icons on each row indicate interactivity.
+- **Responsive UI:** Fully adaptable layout for desktop and mobile.
+- **CRUD Operations:** Create, Read, Update, Delete blog posts.
+- **Local Storage Persistence:** Data remains after page refresh.
+- **Individual Blog Pages:** View full blog post details using React Router.
+- **Material UI Theming:** Custom light and dark themes.
+- **Client-Side Only:** No backend or API required.
+- **Clickable Rows:** Click on a blog row – except action icons – to view blog details.
+- **Content Preview:** Hover on blog titles to show truncated content previews.
+- **Clear Visual Cues:** Clickable caret icons on each row indicate interactivity.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - React 18
 - TypeScript
@@ -23,7 +22,7 @@ A responsive Blog Management Dashboard built with React and Material UI v5, supp
 - React Router v6
 - Local Storage API
 
-## ⚡ Getting Started
+## Getting Started
 
 1️⃣ Clone the Repository
 
@@ -41,12 +40,12 @@ A responsive Blog Management Dashboard built with React and Material UI v5, supp
 3️⃣ Start Development Server
 
 ```bash
- npm start
+ npm run dev
 ```
+
 The app will run at [http://localhost:5173](http://localhost:5173)
 
-
-## 🎯 Usage Guide
+## Usage Guide
 
 - **Add a New Blog:** Click the Add Blog button and fill out the form in the dialog.
 - **Edit a Blog:** Use the Edit icon in the dashboard table.
@@ -54,26 +53,17 @@ The app will run at [http://localhost:5173](http://localhost:5173)
 - **Delete Blog:** Use the Delete icon; confirm via the dialog.
 - **Hover Preview:** Hover over blog titles to see a truncated preview of the content.
 - **Sorting & Pagination:** Sort blogs by title, author, date, or status and navigate pages easily.
-## 🎨 Theming
+
+## Theming
 
 Custom Light and Dark themes implemented using Material UI's `createTheme`.
 
-| Mode  | Primary  | Secondary | Background | Text Primary | Text Secondary |
-|-------|----------|-----------|------------|--------------|----------------|
-| Light | #00897B  | #546E7A   | #F5F5F5    | #263238      | #546E7A        |
-| Dark  | #4DB6AC  | #90A4AE   | #212121    | #EEEEEE      | #B0BEC5        |
+| Mode  | Primary | Secondary | Background | Text Primary | Text Secondary |
+| ----- | ------- | --------- | ---------- | ------------ | -------------- |
+| Light | #00897B | #546E7A   | #F5F5F5    | #263238      | #546E7A        |
+| Dark  | #4DB6AC | #90A4AE   | #212121    | #EEEEEE      | #B0BEC5        |
 
-## 📝 Lessons Learned
-
-- Abstraction of reusable UI components increased code maintainability and scalability.  
-- Integrating React Router allowed smooth navigation between the dashboard and detailed blog pages.  
-- Using React state combined with Local Storage enabled data persistence without a backend.  
-- Implemented tooltip previews on hover to improve usability while keeping UI clean.  
-- Managed row click event handling to differentiate between action icons and navigational clicks.  
-- Applied Material UI theming to support dark and light modes, enhancing user experience across environments.  
-- Built efficient pagination and sorting to handle large datasets gracefully in the client.  
-
-## 🖼 Screenshots
+## Screenshots
 
 - Dashboard (Light Mode)
   <img width="1332" height="874" alt="image" src="https://github.com/user-attachments/assets/ccf84f23-3eb1-4691-a05a-cb93764f511f" />
@@ -81,15 +71,9 @@ Custom Light and Dark themes implemented using Material UI's `createTheme`.
 - Dashboard (Dark Mode)
   <img width="1329" height="874" alt="image" src="https://github.com/user-attachments/assets/3e47be81-6750-459c-8355-e9657ce8fcf1" />
 
-## 🙌 Acknowledgements
-
-- Material UI for the amazing component library
-- React Router for smooth navigation and routing
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
-
 
 ## Contact
 
@@ -99,4 +83,4 @@ If you’d like to connect:
 
 🔗 [LinkedIn](https://www.linkedin.com/in/karishma-gajula/)
 
-Thank you for exploring the Responsive Blog  Dashboard UI! Your feedback and contributions help make this project better.
+Thank you for exploring the Responsive Blog Management Dashboard UI! Your feedback and contributions help make this project better.
