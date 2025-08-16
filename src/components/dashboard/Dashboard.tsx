@@ -11,13 +11,13 @@ import {
   InputAdornment,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { CustomTable } from "./table/CustomTable";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import { AddEditBlogDialog } from "../blog/AddEditBlogDialog";
 import { DeleteBlogDialog } from "../blog/DeleteBlogDialog";
 import type { BlogData } from "../../common/type";
 import { Action } from "../../common/constants";
 import CloseIcon from "@mui/icons-material/Close";
+import { BlogTable } from "./table/BlogTable";
 
 export const Dashboard = ({
   blogs,
@@ -74,7 +74,7 @@ export const Dashboard = ({
 
       <Paper sx={{ p: 3, mb: 3 }}>
         <Stack direction="row" sx={{ mb: 2, alignItems: "center" }}>
-          <Typography variant="h6" sx={{ color: theme.palette.primary.main }}>
+          <Typography variant="h5" sx={{ color: theme.palette.primary.main }}>
             Blogs
           </Typography>
           <TextField
@@ -111,7 +111,7 @@ export const Dashboard = ({
             <AddBoxOutlinedIcon />
           </IconButton>
         </Stack>
-        <CustomTable
+        <BlogTable
           filteredRows={filteredRows}
           handleEditIconClick={(b) => {
             setSelected(b);
