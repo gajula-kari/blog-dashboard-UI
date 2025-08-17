@@ -15,6 +15,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import type { BlogData } from "../../common/type";
 import PublishIcon from "@mui/icons-material/Publish";
 import { Status } from "../../common/constants";
+import { useState, useEffect } from "react";
 
 type BlogPageProps = {
   blogs: BlogData[];
@@ -22,9 +23,22 @@ type BlogPageProps = {
 };
 
 export const BlogPage = ({ blogs, updateBlogs }: BlogPageProps) => {
+  const [updated, setUpdated] = useState(false);
+
   const { id } = useParams();
   const navigate = useNavigate();
   const blog = blogs.find((b) => b.id === id);
+
+  useEffect(() => {
+    if (updated) {
+      const timer = setTimeout(() => setUpdated(false), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [updated]);
+
+  useEffect(() => {
+    document.title = `${blog?.title} - Blog Management Dashboard`;
+  }, [blog?.title]);
 
   const onPublishIconClick = () => {
     const updatedBlog = {
@@ -33,6 +47,7 @@ export const BlogPage = ({ blogs, updateBlogs }: BlogPageProps) => {
       date: new Date().toISOString().split("T")[0],
     } as BlogData;
     updateBlogs(updatedBlog);
+    setUpdated(true);
   };
 
   if (!blog) {
@@ -76,7 +91,11 @@ export const BlogPage = ({ blogs, updateBlogs }: BlogPageProps) => {
                     "&:hover": {
                       backgroundColor: "secondary.dark",
                     },
+                    width: 32,
+                    height: 32,
+                    "& svg": { fontSize: "18px" },
                   }}
+                  size="small"
                   onClick={() => onPublishIconClick()}
                 >
                   <PublishIcon />
@@ -86,14 +105,28 @@ export const BlogPage = ({ blogs, updateBlogs }: BlogPageProps) => {
           </Box>
 
           <Typography variant="subtitle2" color="text.secondary" gutterBottom>
-            By {blog.author} | {new Date(blog.date).toLocaleDateString()}
+            By {blog.author} |{" "}
+            <span
+              style={{
+                display: "inline-block",
+                transition: "transform 0.1s ease-in-out",
+                transform: updated ? "scale(1.05)" : "scale(1)",
+              }}
+            >
+              {new Date(blog.date).toLocaleDateString()}
+            </span>
           </Typography>
           <Chip
             label={blog.status}
             color={blog.status === "Published" ? "success" : "warning"}
             size="medium"
-            sx={{ mb: 3 }}
+            sx={{
+              mb: 3,
+              transition: "transform 0.1s ease-in-out",
+              transform: updated ? "scale(1.05)" : "scale(1)",
+            }}
           />
+
           <Divider sx={{ mb: 3 }} />
           <Box>
             <Typography

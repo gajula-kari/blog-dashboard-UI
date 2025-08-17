@@ -64,6 +64,7 @@ export const AddEditBlogDialog = ({ onClose, onSubmit, blogData }: Props) => {
       formData.title.trim() === blogData.title &&
       formData.author.trim() === blogData.author &&
       formData.content.trim() === blogData.content &&
+      formData.date.trim() === blogData.date &&
       formData.status.trim() === blogData.status
     );
   }, [isEdit, formData, blogData]);

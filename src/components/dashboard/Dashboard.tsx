@@ -18,6 +18,7 @@ import type { BlogData } from "../../common/type";
 import { Action } from "../../common/constants";
 import CloseIcon from "@mui/icons-material/Close";
 import { BlogTable } from "./table/BlogTable";
+import { useEffect } from "react";
 
 export const Dashboard = ({
   blogs,
@@ -32,6 +33,10 @@ export const Dashboard = ({
   const [selected, setSelected] = React.useState<BlogData | null>(null);
   const navigate = useNavigate();
   const theme = useTheme();
+
+  useEffect(() => {
+    document.title = "Blog Management Dashboard";
+  }, []);
 
   const filteredRows = React.useMemo(() => {
     const searchValueLowerCase = searchValue.toLowerCase();
