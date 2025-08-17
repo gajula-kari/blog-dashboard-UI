@@ -13,6 +13,7 @@ A responsive Blog Management Dashboard built with React and Material UI v5, supp
 - **Clickable Rows:** Click on a blog row – except action icons – to view blog details.
 - **Content Preview:** Hover on blog titles to show truncated content previews.
 - **Clear Visual Cues:** Clickable caret icons on each row indicate interactivity.
+- **Smooth Visual Feedback on View Blog Page:** Subtle transform transitions (scale animations) applied to status chips and dates to clearly indicate state changes and enhance user experience.
 
 ## Tech Stack
 
@@ -67,10 +68,11 @@ Custom Light and Dark themes implemented using Material UI's `createTheme`.
 
 - Dashboard (Light Mode)
   <img width="1229" height="874" alt="image" src="https://github.com/user-attachments/assets/8c831cad-7662-4f9c-a385-d147ed4cf814" />
-  
+  <img width="1229" height="875" alt="image" src="https://github.com/user-attachments/assets/36252e0f-7c87-4201-b300-e742eab68cd5" />
+
 - Dashboard (Dark Mode)
   <img width="1230" height="876" alt="image" src="https://github.com/user-attachments/assets/7e5f1164-a246-4c3c-a979-d70236b35954" />
-
+  <img width="1230" height="874" alt="image" src="https://github.com/user-attachments/assets/c500f042-8524-4459-91a2-c7fdd72560e7" />
 
 ## License
 
